@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<!--
+#
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+# 
+# http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+#  KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+#
+-->
+  <head>
+  <title></title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+	<meta charset="utf-8">
+
+
+	<!-- iPad/iPhone specific css below, add after your main css >
+	<link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />		
+	<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />		
+	-->
+	<!-- If your application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
+	<script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
+
+    <script type="text/javascript">
+
+
+	// If you want to prevent dragging, uncomment this section
+	/*
+	function preventBehavior(e) 
+	{ 
+      e.preventDefault(); 
+    };
+	document.addEventListener("touchmove", preventBehavior, false);
+	*/
+	
+	/* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
+	see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
+	for more details -jm */
+	/*
+	function handleOpenURL(url)
+	{
+		// TODO: do something with the url passed in.
+	}
+	*/
+	
+	function onBodyLoad()
+	{		
+		document.addEventListener("deviceready", onDeviceReady, false);
+	}
+	
+	/* When this function is called, Cordova has been initialized and is ready to roll */
+	/* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
+	see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
+	for more details -jm */
+	function onDeviceReady()
+	{
+		// do your thing!
+		navigator.notification.alert("Cordova is working")
+	}
+    
+    </script>
+      <link rel="stylesheet" href="jquery.mobile-1.1.0.min.css"/>
+      <link rel="stylesheet" href="my.css"/>
+      <script src="jquery-1.7.1.min.js">
+      </script>
+      <script src="jquery.mobile-1.1.0.min.js">
+      </script>
+   
+  </head>
+  <body>
+      <!-- Home -->
+      <div data-theme="d" data-role="page" id="page1">
+          <div data-theme="d" data-role="header">
+              <h3>
+                  Prods2Boycott
+              </h3>
+              
+              <div data-role="navbar" data-iconpos="top">
+                  <ul>
+                      <li>
+                          <a href="#page1" data-icon="alert" class="ui-btn-active ui-state-persist" data-transition="none">
+                              Products to Boycott                              
+                          </a></li>
+                      <li>
+                          <a href="#page2" data-icon="gear" data-transition="none">
+                              Settings
+                              
+                          </a></li>
+                  </ul>
+              </div>
+          </div>
+          <div data-role="content" style="padding: 15px">
+              <div data-role="fieldcontain">
+                  <fieldset data-role="controlgroup">
+                      <label for="searchinput2">
+                      </label>
+                      <input id="searchinput2" placeholder="Search for products" value="" type="search"/>
+                  </fieldset>
+              </div>
+              <div class="content-primary">
+                  <ul data-role="listview">
+                      <li data-role="list-divider">Recent Products:</li>
+                      <li>
+                          <img src="images/chick-fil-a.jpg"/>
+                          
+                          <h3>Chick-fil-a Restaurant</h3>
+                          <table style='font-size:10px'>
+                              <tr>
+                                  <td>Info:</td>
+                                  <td>Their CEO made public anti-gay comments</td>
+                              </tr>
+                              <tr>
+                                  <td>Supports:</td>
+                                  <td>Republicans & T-party</td>
+                                      </tr>
+                                      <tr>
+                                      <td>Gay Rights:</td>
+                                      <td>F</td>
+                                      </tr>
+                                      <tr>
+                                      <td>Women's Rights:</td>
+                                      <td>B-</td>
+                                      </tr>
+                                      </table>
+                                      </li>
+                                      <li data-role="list-divider">Consumer Products</li>
+                                      <li>
+                                      <img src="images/angel-soft.jpg"/>
+                                      
+                                      <h3>Angel Soft toilet paper</h3>
+                                      <table style='font-size:10px'>
+                                      <tr>
+                                      <td>Info:</td>
+                                      <td>Product of Koch Brothers</td>
+                                      </tr>
+                                      <tr>
+                                      <td>Supports:</td>
+                                      <td>Republicans & T-party</td>
+                                      </tr>
+                                      <tr>
+                                      <td>Gay Rights:</td>
+                                      <td>D</td>
+                                      </tr>
+                                      <tr>
+                                      <td>Women's Rights:</td>
+                                      <td>B-</td>
+                                      </tr>
+                                      </table>
+                                      </li>
+                                      <li>
+                                      <img src="images/Brawny.jpg"/>
+                                      
+                                      <h3>Brawny paper towels</h3>
+                                      <table style='font-size:10px'>
+                                      <tr>
+                                      <td>Info:</td>
+                                      <td>Product of Koch Brothers</td>
+                                      </tr>
+                                      <tr>
+                                      <td>Supports:</td>
+                                      <td>Republicans & T-party</td>
+                                      </tr>
+                                      <tr>
+                                      <td>Gay Rights:</td>
+                                      <td>D</td>
+                                      <tr>
+                                      <td>Women's Rights:</td>
+                                      <td>B-</td>
+                                      </tr>
+                                      </table>
+                                      </li>
+                                      <li>
+                                      <img src="images/DixiePlates.jpg"/>
+                                      
+                                      <h3>Dixie plates, bowls, napkins and cups</h3>
+                                      <table style='font-size:10px'>
+                                      <tr>
+                                      <td>Info:</td>
+                                      <td>Product of Koch Brothers</td>
+                                      </tr>
+                                      <tr>
+                                      <td>Supports:</td>
+                                      <td>Republicans & T-party</td>
+                                      </tr>
+                                      <tr>
+                                      <td>Gay Rights:</td>
+                                      <td>D</td>
+                                      </tr>
+                                      <tr>
+                                      <td>Women's Rights:</td>
+                                      <td>B-</td>
+                                      </tr>
+                                      </table>
+                                      </li>
+                                      <li>
+                                      <img src="images/mardiGras.jpg"/>
+                                      
+                                      <h3>Mardi Gras napkins and towels</h3>
+                                      <table style='font-size:10px'>
+                                      <tr>
+                                      <td>Info:</td>
+                                      <td>Product of Koch Brothers</td>
+                                      </tr>
+                                      <tr>
+                                      <td>Supports:</td>
+                                      <td>Republicans & T-party</td>
+                                      </tr>
+                                      <tr>
+                                      <td>Gay Rights:</td>
+                                      <td>D</td>
+                                      </tr>
+                                      <tr>
+                                      <td>Women's Rights:</td>
+                                      <td>B-</td>
+                                      </tr>
+                                      </table>
+                                      </li>
+                                      <li>
+                                      <img src="images/softAndGentle.jpg"/>
+                                      
+                                      <h3>Soft 'n Gentle toilet paper</h3>
+                                      <table style='font-size:10px'>
+                                      <tr>
+                                      <td>Info:</td>
+                                      <td>Product of Koch Brothers</td>
+                                      </tr>
+                                      <tr>
+                                      <td>Supports:</td>
+                                      <td>Republicans & T-party</td>
+                                      </tr>
+                                      <tr>
+                                      <td>Gay Rights:</td>
+                                      <td>D</td>
+                                      </tr>
+                                      <tr>
+                                      <td>Women's Rights:</td>
+                                      <td>B-</td>
+                                      </tr>
+                                      </table>
+                                      </li>
+                                      <li>
+                                      <img src="images/StainMasterCarpet.jpg"/>
+                                      
+                                      <h3>Stain Master Carpets</h3>
+                                      <table style='font-size:10px'>
+                                      <tr>
+                                      <td>Info:</td>
+                                      <td>Product of Koch Brothers</td>
+                                      </tr>
+                                      <tr>
+                                      <td>Supports:</td>
+                                      <td>Republicans & T-party</td>
+                                      </tr>
+                                      <tr>
+                                      <td>Gay Rights:</td>
+                                      <td>D</td>
+                                      </tr>
+                                      <tr>
+                                      <td>Women's Rights:</td>
+                                      <td>B-</td>
+                                      </tr>
+                                      </table>
+                                      </li>
+                                      <li data-role="list-divider">Older Major Issues</li>
+                                      <li>
+                                      <img src="images/bp.jpg"/>
+                                      
+                                      <h3>British Petroleum (BP)</h3>
+                                      <table style='font-size:10px'>
+                                      <tr>
+                                      <td>Info:</td>
+                                      <td>Created largest oil spill in gulf-cost</td>
+                                      </tr>
+                                      <tr>
+                                      <td>Supports:</td>
+                                      <td>Republicans & T-party</td>
+                                      </tr>
+                                      <tr>
+                                      <td>Environment:</td>
+                                      <td>F</td>
+                                      </tr>
+                                      </table>
+                                      </li>
+                                      <li>
+                                      <img src="images/bank-of-america.jpg"/>
+                                      
+                                      <h3>Bank Of America</h3>
+                                      <table style='font-size:10px'>
+                                      <tr>
+                                      <td>Info:</td>
+                                      <td>Started charging consumers $5 monthly fees</td>
+                                      </tr>
+                                      
+                                      <tr>
+                                      <td>Consumer Economics:</td>
+                                      <td>F</td>
+                                      </tr>
+                                      </table>
+                                      </li>
+                                      </ul>
+                                      </div>
+                                      </div>
+                                      </div>
+                                      <div data-role="page" data-theme="d" id="page2">
+                                      <div data-theme="d" data-role="header">
+                                      <h3>
+                                      Prods2Boycott
+                                      </h3>
+                                      
+                                      <div data-role="navbar" data-iconpos="top">
+                                      <ul>
+                                      <li>
+                                      <a href="#page1" data-icon="alert" data-transition="none">
+                                      Products to Boycott
+                                      
+                                      </a></li>
+                                      <li>
+                                      <a href="#page2" data-icon="gear" class="ui-btn-active ui-state-persist" data-transition="none">
+                                      Settings
+                                      
+                                      </a></li>
+                                      </ul>
+                                      </div>
+                                      </div>
+                                      <div data-role="fieldcontain">
+                                      <fieldset data-role="controlgroup">
+                                      <legend>I am a:</legend>
+                                      <input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked"/>
+                                      <label for="radio-choice-1">Democrat</label>
+                                      
+                                      <input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2"/>
+                                      <label for="radio-choice-2">Republican</label>
+                                      
+                                      <input type="radio" name="radio-choice" id="radio-choice-3" value="choice-3"/>
+                                      <label for="radio-choice-3">Independent</label>
+                                      </fieldset>
+                                      </div>
+                                      
+                                      
+                                      <div data-role="fieldcontain">
+                                      <fieldset data-role="controlgroup">
+                                      <legend>I care about:</legend>
+                                      
+                                      <input type="checkbox" name="checkbox-1a" id="checkbox-1a" class="custom"/>
+                                      <label for="checkbox-1a">Women's Rights</label>
+                                      
+                                      <input type="checkbox" name="checkbox-2a" id="checkbox-2a" class="custom"/>
+                                      <label for="checkbox-2a">Environment</label>
+                                      
+                                      <input type="checkbox" name="checkbox-3a" id="checkbox-3a" class="custom"/>
+                                      <label for="checkbox-3a">Education</label>
+                                      
+                                      <input type="checkbox" name="checkbox-4a" id="checkbox-4a" class="custom"/>
+                                      <label for="checkbox-4a">Gay Rights</label>
+                                      
+                                      <input type="checkbox" name="checkbox-5a" id="checkbox-5a" class="custom"/>
+                                      <label for="checkbox-5a">Immigrant's rights</label>
+                                      
+                                      <input type="checkbox" name="checkbox-6a" id="checkbox-6a" class="custom"/>
+                                      <label for="checkbox-6a">Sustainable Food</label>
+                                      
+                                      <input type="checkbox" name="checkbox-7a" id="checkbox-7a" class="custom"/>
+                                      <label for="checkbox-7a">Animals</label>
+                                      
+                                      <input type="checkbox" name="checkbox-8a" id="checkbox-8a" class="custom"/>
+                                      <label for="checkbox-8a">Human Trafficking</label>
+                                      
+                                      <input type="checkbox" name="checkbox-9a" id="checkbox-9a" class="custom"/>
+                                      <label for="checkbox-9a">Economic Justice</label>
+                                      
+                                      </fieldset>
+                                      </div>
+                                      <a href="#page1" data-role="button">Submit</a>
+                                      </div>
+                                    </body>
+</html>
